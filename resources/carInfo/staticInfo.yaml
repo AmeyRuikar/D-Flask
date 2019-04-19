@@ -1,0 +1,27 @@
+cars:
+  suv:
+    - Land Cruiser:
+        make: Toyota
+        price: 80k
+    - Range Rover:
+        make: Land Rover
+        price: 90k 
+    - GLS:
+        make: Mercedes Benz
+        price: 70k     
+    - Q7:
+        make: Audi
+        price: 60k 
+    - X7:
+        make: BMW
+        price: 80k 
+  sedan:
+    - S-class:
+        make: Mercedes Benz
+        price: 90k     
+    - A8:
+        make: Audi
+        price: 90k 
+    - 7-series:
+        make: BMW
+        price: 90k
