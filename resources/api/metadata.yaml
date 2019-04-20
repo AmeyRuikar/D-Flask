@@ -1,0 +1,15 @@
+version: 0.0.1
+lastupdated: '2019-04-12 08:00:00'
+api:
+  GET:
+    - '/info':
+        required_params: None
+        returns: json of car info by type
+    - '/info?type=<type>':
+        required_params: type of the car. e.g: suv, sedan..
+        returns: json of car info for the specific type
+  POST:
+    - 'addInfo':
+        required_params: JSON with the specific fields - type, name, make price
+        returns: success or exception message      
+  

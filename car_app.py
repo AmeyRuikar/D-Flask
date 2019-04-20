@@ -1,8 +1,18 @@
 """
 car data apis
 """
+import logging.config
+import logging
 import yaml
-from flask import Flask, abort, jsonify, request
+
+from flask import Flask, abort, jsonify, request, Response
+
+# init logger
+with open('./config/config.yml', 'r') as config:
+    configs = yaml.safe_load(config)
+
+logging.config.dictConfig(configs)
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 
@@ -36,6 +46,7 @@ def add_car_info():
     new_car_info = request.json
 
     if required_fields != set(new_car_info.keys()):
+        logger.error('Request does not have all the required fields')
         return abort(500, 'All fields not present(or extra fields present). Expected fields{0}' \
                                                                     .format(list(required_fields)))
 
@@ -43,6 +54,15 @@ def add_car_info():
                                     {'make': new_car_info['make'], 'price': new_car_info['price']}})
 
     return jsonify({'message': 'successfully added to /info data'})
+
+@app.route('/apiMetadata')
+def get_api_description():
+    """
+    describes the apis
+    """
+    logger.info('API metadata')
+    contents = open('./resources/api/metadata.yaml').read()
+    return Response(contents, mimetype='text/plain')
 
 if __name__ == '__main__':
     app.run()
