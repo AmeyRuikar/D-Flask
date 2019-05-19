@@ -1,6 +1,8 @@
 # Flask-skeleton
 Containerized flask web-app, configured to run with `gunicorn`. Also contains examples for `GET` and `POST` requests.
 
+![](./docs/images/D-flask.jpeg)
+
 # Building the container:
 Requires two build-time arguments: `PORT` and `WORKERS`
 > docker build -t car_app:0 --build-arg PORT=80 --build-arg WORKERS=2 .
