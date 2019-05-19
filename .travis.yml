@@ -3,9 +3,13 @@ branches:
   only:
   - master
 
+virtualenv:
+  system_site_packages: false
 # Install the codecov pip dependency
 install:
- - pip install pytest==3.3 pytest-cov
+ - pip install -r requirements.txt
+ - pip install pytest-cov
+ - pip install codecov
 
 services:
   - docker
