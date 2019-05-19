@@ -1,4 +1,4 @@
-# Flask-skeleton [![Build Status](https://travis-ci.org/AmeyRuikar/D-Flask.svg?branch=master)](https://travis-ci.org/AmeyRuikar/D-Flask)
+# Flask-skeleton [![Build Status](https://travis-ci.org/AmeyRuikar/D-Flask.svg?branch=master)](https://travis-ci.org/AmeyRuikar/D-Flask) [![codecov](https://codecov.io/gh/AmeyRuikar/D-Flask/branch/master/graph/badge.svg)](https://codecov.io/gh/AmeyRuikar/D-Flask)
 Containerized flask web-app, configured to run with `gunicorn`. Also contains examples for `GET` and `POST` requests. 
 
 <p align="center">
