@@ -1,0 +1,12 @@
+language: python
+branches:
+  only:
+  - master
+
+services:
+  - docker
+before_install:
+ - docker pull python:3.7-alpine
+
+script: 
+- docker build -t car_app:0 --build-arg PORT=80 --build-arg WORKERS=2 .
