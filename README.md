@@ -1,5 +1,5 @@
-# Flask-skeleton
-Containerized flask web-app, configured to run with `gunicorn`. Also contains examples for `GET` and `POST` requests.
+# Flask-skeleton [![Build Status](https://travis-ci.org/AmeyRuikar/D-Flask.svg?branch=master)](https://travis-ci.org/AmeyRuikar/D-Flask)
+Containerized flask web-app, configured to run with `gunicorn`. Also contains examples for `GET` and `POST` requests. 
 
 <p align="center">
     <img src="./docs/images/D-flask.jpeg" width="50%" style="display: block;">
