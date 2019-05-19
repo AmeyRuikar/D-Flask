@@ -5,9 +5,11 @@ ARG WORKERS
 
 WORKDIR /car_app
 
-ADD . .
+COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
+
+COPY . .
 
 ENV PORT ${PORT}
 ENV WORKERS ${WORKERS}
