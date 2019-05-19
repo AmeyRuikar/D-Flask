@@ -7,16 +7,15 @@ branches:
 install:
  - pip install pytest pytest-cov
 
-script:
-  - pytest --cov=./
-  
-# Push the results back to codecov
-after_success:
-  - codecov
-
 services:
   - docker
 before_install:
   - docker pull python:3.7-alpine
+
 script: 
+  - pytest --cov=./
   - docker build -t car_app:0 --build-arg PORT=80 --build-arg WORKERS=2 .
+
+# Push the results back to codecov
+after_success:
+  - codecov
