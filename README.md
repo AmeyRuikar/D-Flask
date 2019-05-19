@@ -1,7 +1,9 @@
 # Flask-skeleton
 Containerized flask web-app, configured to run with `gunicorn`. Also contains examples for `GET` and `POST` requests.
 
-![](./docs/images/D-flask.jpeg)
+<p align="center">
+    <img src="./docs/images/D-flask.jpeg" width="50%" style="display: block;">
+</p>
 
 # Building the container:
 Requires two build-time arguments: `PORT` and `WORKERS`
